@@ -1,0 +1,41 @@
+# Built artifacts
+bin/
+gen/
+out/
+build/
+scripts/
+release/
+.gradle/
+.kotlin/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+/captures/
+.externalNativeBuild/
+.cxx/
+/assetWizardSettings.xml
+
+# Local configuration files
+local.properties
+.artifacts/
+.ai/
+
+# Signing files
+*.jks
+*.keystore
+*.p12
+*.properties
+!gradle.properties
+
+# Google Services
+google-services.json
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

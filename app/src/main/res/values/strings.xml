@@ -1,0 +1,56 @@
+<resources>
+    <string name="launcher_name">CallGuard</string>
+    <string name="app_name">Prevention of Accidental Calls</string>
+    <string name="main_title1">Overview</string>
+    <string name="main_status_active">Enabled</string>
+    <string name="main_status_inactive">Disabled</string>
+    <string name="main_overview">
+        "When an outgoing call is detected, the call is temporarily disconnected, and a confirmation dialog is displayed for 10 seconds."
+        "You can configure the behavior for calls made from a Bluetooth device while the screen is locked."
+    </string>
+    <string name="main_title2">Settings</string>
+    <string name="main_title3">Permission Status</string>
+    <string name="main_title4">How This App Uses Your Permissions</string>
+    <string name="main_title5">Privacy Policy</string>
+    <string name="main_permit1_redirection">Call Redirection</string>
+    <string name="main_permit2_call">Make and manage phone calls</string>
+    <string name="main_permit3_overlay">Display over other apps</string>
+    <string name="main_permit4_notification">Notifications</string>
+    <string name="main_permit5_full_screen_intent">Full-screen intents</string>
+    <string name="main_button_permit">Grant Permissions</string>
+    <string name="main_button_close">Close</string>
+
+    <string name="main_locked_action">Outgoing Call Behavior on Lock Screen</string>
+    <string name="main_keepalive_label">Keep-alive Monitoring Service (Normally OFF)</string>
+    <string name="main_outside_dismiss_label">Double-tap Outside to Dismiss</string>
+    <string name="main_keepalive_explain">Turn ON only if you are unable to initiate a Bluetooth call from the lock screen on certain device models. ON increases battery usage.</string>
+    <string name="main_toast_permit1_recover">It seems permission was denied. Please grant it from the App Info screen.</string>
+    <string name="main_toast_permit1_fail">Call permission is required for the app to function.</string>
+    <string name="main_toast_disabled">Disabling call redirection permission</string>
+
+    <string name="confirm_title">Call Confirmation</string>
+    <string name="confirm_apply">Call\n(Long Tap)</string>
+    <string name="confirm_cancel">Cancel</string>
+    <string name="confirm_notify_cancel">Call Cancelled</string>
+
+    <string name="blocked_notify_title">Outgoing calls detected while locked</string>
+    <string name="blocked_notify_time_format">Detected Time: %1$s</string>
+    <string name="blocked_notify_anr">Processing could not be completed due to an overload.</string>
+
+    <string name="channel_id1_name">Full-screen Intents</string>
+    <string name="channel_id1_desc">Display via head-up notifications when the screen is locked</string>
+    <string name="channel_id2_name">Normal Confirm Dialog</string>
+    <string name="channel_id2_desc">Overlaid display via a foreground service notification</string>
+    <string name="channel_id3_name">Outgoing Call Blocked</string>
+    <string name="channel_id3_desc">Most recent information for which dissemination has been halted</string>
+    <string name="channel_id4_name">Manual Cancellation</string>
+    <string name="channel_id4_desc">Notification when an outgoing call is canceled from the confirmation screen</string>
+    <string name="channel_id5_name">Keep-alive Service</string>
+    <string name="channel_id5_desc">Fix for call confirmation not working while the screen is locked on certain models</string>
+
+    <string name="notification_keepalive_compact_text">Call confirmation service is running</string>
+    <string name="notification_keepalive_big_text">This feature is intended for use only on certain devices running an extended OS where the detection of outgoing signals from Bluetooth devices is unreliable. \n
+Because it runs as a background process, it increases battery and memory consumption. Please keep this feature disabled if you do not experience this issue or do not use Bluetooth-based signal transmission. \n
+The background process may be forcibly terminated after a few hours. If this happens, you can restart it by opening the app screen.</string>
+    <string name="notification_keepalive_bigcontent_text">Resident Service</string>
+</resources>

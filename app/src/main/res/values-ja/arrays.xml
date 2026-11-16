@@ -1,0 +1,35 @@
+<resources>
+    <string-array name='permission_explain'>
+        <item>権限を必要とする主要機能：</item>
+        <item>１）電話発信に割り込みます。</item>
+        <item>２）ロングタップで、電話発信をします。</item>
+        <item>３）フォアグラウンドサービスを利用するため通知権限が必要です。</item>
+        <item>４）確認ダイアログを他のアプリ上にオーバーレイ表示します。</item>
+        <item>５）ロック時には全画面インテント表示します。</item>
+        <item>\n一部の機種においては追加権限付与が必要となります。</item>
+    </string-array>
+
+    <string-array name='privacy_policy'>
+        <item>1. 取得する情報</item>
+        <item>当アプリは、電話発信時の電話番号を取得します。\n</item>
+        <item>2. 情報の利用目的</item>
+        <item> 取得した情報は画面表示とリダイアルのためだけに使用されます。\n</item>
+        <item>3. 情報の第三者提供および送信</item>
+        <item>当アプリで取得した情報は保存されません。外部のサーバーや第三者に送信・提供されることも一切ありません。\n</item>
+        <item>4. 免責事項</item>
+        <item>本アプリは無料のフリーソフトです。利用により生じた影響について、誰も責任を取りません。\n</item>
+    </string-array>
+
+    <string-array name='keyguard_mode_options'>
+        <item>発信する(カーナビ用）</item>
+        <item>発信を禁止する(音楽再生用)</item>
+        <item>確認画面を表示する</item>
+    </string-array>
+
+    <string-array name='keyguard_mode_explains'>
+        <item>確認画面を表示せずハンズフリー発信を行います</item>
+        <item>BTヘッドセットからのリダイヤルを防止します</item>
+        <item>全画面インテント表示(通知抑制に依存)</item>
+    </string-array>
+
+</resources>

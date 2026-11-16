@@ -1,0 +1,56 @@
+<resources>
+    <string name="launcher_name">誤発信防止</string>
+    <string name="app_name"> 誤発信防止（発信確認）</string>
+    <string name="main_title1">機能概要</string>
+    <string name="main_status_active">有効</string>
+    <string name="main_status_inactive">無効</string>
+    <string name="main_overview">
+        "電話発信を検知すると一旦電話を切り、確認画面を10秒間表示します。"
+        "画面ロック時にBluetooth機器から発信した場合の動作を設定できます。"
+    </string>
+    <string name="main_title2">設定</string>
+    <string name="main_title3">権限状況</string>
+    <string name="main_title4">権限が必要な理由</string>
+    <string name="main_title5">プライバシーポリシー</string>
+    <string name="main_permit2_call">電話発信権限</string>
+    <string name="main_permit1_redirection">通話転送アプリへの登録</string>
+    <string name="main_permit3_overlay">他のアプリの上に表示</string>
+    <string name="main_permit4_notification">通知権限</string>
+    <string name="main_permit5_full_screen_intent">全画面通知の許可</string>
+    <string name="main_button_permit">権限付与</string>
+    <string name="main_button_close">閉じる</string>
+
+    <string name="main_locked_action">画面ロック時の発信動作</string>
+    <string name="main_keepalive_label">監視サービスを常駐する（通常OFF）</string>
+    <string name="main_outside_dismiss_label">ダイアログ枠外のダブルタップで閉じる</string>
+    <string name="main_keepalive_explain">一部機種で画面ロック状態からBluetooth発信できない場合に限りONにします。ONにするとバッテリー消費が増えます。</string>
+    <string name="main_toast_permit1_recover">一回権限付与を拒否しているようです。アプリ情報画面から付与して下さい</string>
+    <string name="main_toast_permit1_fail">アプリの動作には電話権限が必要です。</string>
+    <string name="main_toast_disabled">電話転送権限を無効にしています</string>
+
+    <string name="confirm_title">発信確認</string>
+    <string name="confirm_apply">発信\n(Long Tap)</string>
+    <string name="confirm_cancel">キャンセル</string>
+    <string name="confirm_notify_cancel">発信をキャンセルしました</string>
+
+    <string name="blocked_notify_title">ロック中に発信がありました</string>
+    <string name="blocked_notify_time_format">検知時刻: %1$s</string>
+    <string name="blocked_notify_anr">過負荷状態のため処理できませんでした</string>
+
+    <string name="channel_id1_name">全画面インテント</string>
+    <string name="channel_id1_desc">画面ロック時にヘッドアップ通知を経由して表示</string>
+    <string name="channel_id2_name">確認ダイアログ</string>
+    <string name="channel_id2_desc">フォアグラウンドサービス通知を経由してオーバーラップ表示</string>
+    <string name="channel_id3_name">発信ブロック</string>
+    <string name="channel_id3_desc">発信を中止した直近情報</string>
+    <string name="channel_id4_name">手動キャンセル</string>
+    <string name="channel_id4_desc">確認画面で発信キャンセルしたときの通知</string>
+    <string name="channel_id5_name">常駐監視サービス</string>
+    <string name="channel_id5_desc">一部機種で画面ロック中に発信確認が機能しない対策用</string>
+
+    <string name="notification_keepalive_compact_text">発信確認監視サービスが稼働中です</string>
+    <string name="notification_keepalive_big_text">拡張OSを採用した一部機種において、Bluetooth機器からの発信確認が不安定な場合に限って使う機能です。\n
+常駐するためバッテリーとメモリ消費量が増えます。事象が発生しない機種/Bluetooth発信を使わない場合はOFFにして下さい。\n
+常駐は数時間で強制停止することがあります。停止した場合はアプリ画面を開けば再起動します。</string>
+    <string name="notification_keepalive_bigcontent_text">常駐サービス</string>
+</resources>

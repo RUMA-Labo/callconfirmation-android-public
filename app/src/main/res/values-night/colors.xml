@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- テキスト基本カラー (ダークモード用) -->
+    <color name="main_header_bg">#404010</color>
+    <color name="status_green">#81C784</color>
+    <color name="status_red">#E57373</color>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:replace="android:appComponentFactory">
+
+        <!-- 電話発信をフックするサービス -->
+        <service
+            android:name=".RedirectionServiceImpl"
+            android:directBootAware="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_CALL_REDIRECTION_SERVICE">
+            <intent-filter>
+                <action android:name="android.telecom.CallRedirectionService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <!-- 確認画面表示のためのフォアグラウンドサービス -->
+        <service
+            android:name=".service.CallConfirmForegroundService"
+            android:directBootAware="true"
+            android:exported="false"
+            android:foregroundServiceType="shortService" />
+
+        <!-- プロセス優先度維持のための常駐フォアグラウンドサービス -->
+        <service
+            android:name=".service.CallConfirmKeepAliveService"
+            android:directBootAware="true"
+            android:enabled="false"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Addressed an issue on certain models where calls could not be initiated from Bluetooth devices (such as car navigation systems) while the screen was locked. A resident service maintains process priority to prevent the `CallRedirectionService` from being forcibly terminated by LMK." />
+        </service>
+
+        <!-- 端末起動時の自動サービス起動用レシーバー -->
+        <receiver
+            android:name=".receiver.BootReceiver"
+            android:directBootAware="true"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 確認ダイアログを表示するアクティビティ -->
+        <!-- ロック画面上に表示することを許可, Activity起動時に画面を点灯させる,タスクの重複を防ぎ、最新の呼び出しで一元管理-->
+        <activity
+            android:name=".ui.confirm.CallConfirmActivity"
+            android:theme="@style/Theme.AppCompat.DialogWhenLarge"
+            android:launchMode="singleTop"
+            android:directBootAware="true"
+            android:exported="false"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:excludeFromRecents="true">
+        </activity>
+
+        <activity
+            android:name=".LauncherActivity"
+            android:exported="true"
+            android:label="@string/launcher_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

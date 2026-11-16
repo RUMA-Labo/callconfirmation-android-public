@@ -1,0 +1,35 @@
+<resources>
+    <string-array name='permission_explain'>
+        <item>The core features requiring specific permissions :</item>
+        <item>1) Intercepting outgoing calls.</item>
+        <item>2) Initiating calls via a long-tap action.</item>
+        <item>3) Notification permissions are required to utilize a foreground service.</item>
+        <item>4) Displays a confirmation dialog as an overlay on top of other apps.</item>
+        <item>5) Displaying a full-screen intent when the device is locked.</item>
+        <item>\nFor some models, granting additional permissions is required.</item>
+    </string-array>
+
+    <string-array name='privacy_policy'>
+        <item>1. Information Collected</item>
+        <item>This app obtains the phone number when making a call.\n</item>
+        <item>2. Purpose of Use</item>
+        <item>The obtained information is used only for displaying on the screen and for redialing.\n</item>
+        <item>3. Third-party Provision and Transmission</item>
+        <item>The information obtained by this app is not saved. It is never sent or provided to external servers or third parties.\n</item>
+        <item>4. Disclaimer</item>
+        <item>This app is free software. No one takes responsibility for any effects caused by its use.\n</item>
+    </string-array>
+
+    <string-array name='keyguard_mode_options'>
+        <item>Place Calls (for car navigation system)</item>
+        <item>Block Outgoing Calls (for music playback)</item>
+        <item>Display Confirmation Dialog</item>
+    </string-array>
+
+    <string-array name='keyguard_mode_explains'>
+        <item>Hands-free calls without the confirmation dialog</item>
+        <item>Prevents redialing from the Bluetooth headset</item>
+        <item>Full-screen intent (Relies on notification suppression)</item>
+    </string-array>
+
+</resources>

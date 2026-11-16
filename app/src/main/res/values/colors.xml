@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MainActivity 用の色定義 -->
+    <color name="main_header_bg">#B0B0F0</color>
+    <color name="main_header_bg_ng">#30000000</color>
+    <color name="status_green">#2E7D32</color>
+    <color name="status_red">#EA1D51</color>
+
+    <!-- CallConfirmScreen 用の色定義 -->
+    <color name="call_confirm_bg_cover">#B0000810</color> <!-- Alpha指定 -->
+    <color name="call_confirm_number_text">#FFEB3B</color> <!-- 黄色 (Yellow) -->
+    <color name="call_confirm_prefix_bg">#8B4513</color> <!-- 茶色 (Brown) -->
+    <color name="call_confirm_original_bg">#1976D2</color> <!-- 青色 (Blue) -->
+    <color name="call_confirm_none_prefix_bg">#000000</color> <!-- 黒色 (Black) -->
+    <!--- 発信ボタンアニメーション -->
+    <color name="call_confirm_button_liquid_start">#66BB6A</color>
+    <color name="call_confirm_button_liquid_center">#388E3C</color>
+    <color name="call_confirm_button_liquid_end">#1B5E20</color>
+</resources>
